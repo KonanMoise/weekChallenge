@@ -1,2 +1,2 @@
-# JeuDeD_weekChallenge
-Crée un jeu de dé avec HTML, CSS, JS
+# weekChallenge
+Chaque fin de samaine j'ai des challenge à faire ; NaN
