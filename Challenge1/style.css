@@ -1,0 +1,43 @@
+/* Les base */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+}
+
+/* Les Class */
+main{
+    position: absolute;
+    left: 25%;
+    top: 200px;
+    width: 50%;
+    height: 30vmax;
+    border: 2px solid blue;
+    /* background-color: #852; */
+}
+
+main #bloc_de{
+    /* background: red; */
+    border: 2px solid yellow;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+main #bloc_de .de{
+    width: 10%;
+    height: 3vmax;
+    border: 1px solid green;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+}
