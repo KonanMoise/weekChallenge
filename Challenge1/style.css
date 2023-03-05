@@ -28,8 +28,6 @@ body{
 }
 
 main{
-    /* left: 25%;
-    top: 200px; */
     position: absolute;
     top: 170px;
     left: 50%;
@@ -61,6 +59,16 @@ main #bloc_de .de,.test{
     cursor: pointer;
 }
 
+
+
+/* Cacher toutes les autres div sauf le 1er */
+#bloc_de div:nth-child(2),#bloc_de div:nth-child(3),#bloc_de div:nth-child(4),#bloc_de div:nth-child(5) {
+    display: none;
+}
+
+
+
+/* Partie des button ajout et result */
 main .blocBtn{
     display: flex;
     margin: 50px;

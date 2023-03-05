@@ -1,59 +1,45 @@
-// let test = document.querySelectorAll('.test')
-let resul = document.querySelector('.btn_result')
-let ajoutDé = document.querySelector('.btn_div')
-let blocDé = document.querySelector('#bloc_de')
 
-// AJOUT DES DIV
-let cptDiv = 0;
-let total = 0;
-ajoutDé.addEventListener('click', function(e) {
-    e.preventDefault()
-    cptDiv++
+// START création de variable pour indexer les item du html
+let btnajout = document.querySelector('.btn_div')
+let resul  = document.querySelector('.btn_result')
+let contenu = document.querySelector('#bloc_de')
+// END création de variable pour indexer les item du html
 
-    console.log("Jia ajouter une div")
+// variable qui contiengt toutes les div créer
+let toutDiv = document.querySelectorAll('.test')
 
-    if (cptDiv <= 5){
+// variables de logique
+let total = 0
+let cpt = 1
 
-        var div = document.createElement('div');
-        div.innerHTML = 'Click !';
-        div.classList = 'de test';
-        console.log("Jia creer une div")
-        blocDé.appendChild(div);
 
-        var test = document.querySelectorAll('.test')
-        console.log(test)
-        // tabNbr = [1,2,3,4,5,6]
+// START ajout de dé
+if (cpt<5){
+    btnajout.addEventListener('click', ()=>{
+        toutDiv[cpt].style.display = 'block'
+        toutDiv[cpt].textContent = 'Click!'
+        cpt++
+    })
+}
+// END ajout de dé
 
-    }
 
-    var c = 0
-    test.forEach(Elemen =>{
-        if (Elemen){
-            Elemen.addEventListener('click',()=>{
-                c++
-                console.log('le passage n° ', c)
-                if (Elemen)
-                nbrAléa = Math.trunc((Math.random()*6)+1)
-                console.log("Je genere un nbr aléa")
-                console.log('Le nbr alé: ', nbrAléa)
-                Elemen.textContent = nbrAléa
-                console.log(Elemen.textContent)
-                // console.log(eval(Elemen.textContent+2))
-                console.log('le result est ', total + Elemen.textContent)
-                total = parseInt(total) + parseInt(Elemen.textContent)
-                console.log('le total est : ',total)
-            })
-        }
-        else{
-            console.log("Code vas te tuer")
-        }
 
-    }) 
-    
-}, false);
+// START Boucle sur les dé générer et genere un nobre aléatoire
+toutDiv.forEach(item =>{
+    item.addEventListener('click', ()=>{
+        nbrAleatoire = Math.trunc((Math.random()*6)+1)
+        item.textContent = nbrAleatoire
+        total+=nbrAleatoire
+    })
+})
+// END Boucle sur les dé générer et genere un nobre aléatoire
 
+
+
+// START afficher le resultat par le alert
 resul.addEventListener('click', ()=>{
     alert(total)
-    console.log('test in test')
     window.location.reload()
 })
+// END afficher le resultat par le alert
