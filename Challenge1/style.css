@@ -8,36 +8,75 @@
 
 body{
     position: relative;
+    background: #6b6a6a;
 }
 
 /* Les Class */
+
+.bloc-title{
+    text-align: center;
+    margin: 20px;
+}
+
+.bloc-title h3{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.bloc-title p{
+    font-size: 2rem;
+}
+
 main{
+    /* left: 25%;
+    top: 200px; */
     position: absolute;
-    left: 25%;
-    top: 200px;
+    top: 170px;
+    left: 50%;
+    transform: translate(-50%);
     width: 50%;
     height: 30vmax;
-    border: 2px solid blue;
-    /* background-color: #852; */
+    border-radius: 10px;
 }
 
 main #bloc_de{
-    /* background: red; */
-    border: 2px solid yellow;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow:1px 1px 20px #dfd8d8;
 }
 
-main #bloc_de .de{
+main #bloc_de .de,.test{
     width: 10%;
-    height: 3vmax;
-    border: 1px solid green;
+    height: 6vh;
+    border: 1px solid red;
     border-radius: 5px;
     text-align: center;
     padding: 1rem;
     cursor: pointer;
+}
+
+main .blocBtn{
+    display: flex;
+    margin: 50px;
+    gap: 65%;
+}
+
+main .btn_div, main .btn_result{
+    padding: 10px;
+    background: #6dc587;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow:1px 1px 5px #333333;
+    cursor: pointer;
+}
+
+main .btn_result{
+    background: #e7a44c;
 }
