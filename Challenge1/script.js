@@ -39,7 +39,7 @@ toutDiv.forEach(item =>{
 
 // START afficher le resultat par le alert
 resul.addEventListener('click', ()=>{
-    alert('La somme est: ',total)
+    alert('La somme est: ' + total)
     window.location.reload()
 })
 // END afficher le resultat par le alert
