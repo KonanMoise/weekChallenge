@@ -1,3 +1,5 @@
+/* =========== LES BASES DE LA PAGE =========== */ 
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -9,41 +11,55 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #d1cfcf7c;
 }
 
-.container{
+:root{
+    --code: linear-gradient(5deg,#778496,#d2e3fa);
+}
+
+/* =========== LA BOITE DU CONTENU TELEPHONE =========== */ 
+.box{
     width: 40%;
     height: 80vh;
     display: flex;
     border-radius:20px;
     position: relative;
 }
-.front{
+
+/* =========== FACE DU TELEPHONE =========== */ 
+
+.derriere{
     width: 50%;
-    background-color: #c1cfda;
+    background: linear-gradient(5deg,#778496,#d2e3fa);
     height: 100%;
-    border: 4px solid #6f8099;
+    border: 6px solid #6d7f98;
     border-top-left-radius:60px;
     border-bottom-left-radius:60px;
 }
-.img{
+.box-img{
     width: 100px;
     height: 100px;
     margin: 80px auto;
 }
 
-.photo{
+/* Partie caméra */
+.camera{
     width: 200px;
     height: 200px;
     display: flex;
     margin-left: 1rem;
     margin-top: 1rem;
+    border:4px solid #adc8e2;
     border-radius: 50px;
+    background: linear-gradient(5deg,#778496,#d2e3fa);
     box-shadow: -1px 1px 7px black;
 }
-.fls1{
+
+
+
+.col1{
     width: 50%;
-    background-color: #c1cfda;
     border-top-left-radius:50px;
     border-bottom-left-radius:50px;
     display: grid;
@@ -51,21 +67,46 @@ body{
     align-items: center;
     gap: 10px;
 }
-.fls1 div:nth-child(1){
+.col1 div:nth-child(1){
     background-color: black;
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: 8px solid #91a0b0;
+    border: 6px solid #91a0b0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.fls1 div:nth-child(2){
+
+.col1 div:nth-child(1) > .bb{
+    background-color: #25384a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 8px solid #484e5588;
+}
+.col1 div:nth-child(2){
     background-color: black;
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: 8px solid #465565;
+    border: 6px solid #465565;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.fls2{
+
+.col1 div:nth-child(2) > .bb{
+    background-color: rgba(131, 125, 125, 0.568);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 8px solid #5c6169;
+}
+
+
+
+.col2{
     display: grid;
     justify-content: center;
     align-items: center;
@@ -73,10 +114,9 @@ body{
     width: 50%;
     border-top-right-radius:50px;
     border-bottom-right-radius:50px;
-    background-color: #c1cfda;
 } 
 
-.fls2 div:nth-child(1){
+.col2 div:nth-child(1){
     width: 40px;
     height: 40px;
     background-color: #eadacd;
@@ -84,85 +124,126 @@ body{
     border: 4px solid #b6c4d3;
     margin: 0 auto;
 }
-.fls2 div:nth-child(2){
+.col2 div:nth-child(2){
     background-color: black;
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin: 0 auto;
-    border: 8px solid #91a0b0;
+    border: 6px solid #91a0b0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.fls2 div:nth-child(3){
+
+.col2 div:nth-child(2) > .bb{
+    background-color: rgba(131, 125, 125, 0.568);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 8px solid #5c6169;
+}
+
+.col2 div:nth-child(3){
     width: 40px;
     border-radius: 50%;
     height: 40px;
-    background-color: #47484a;
+    background-color: #38393b;
     margin: 0 auto;
 } 
 
+/* =========== FACE DU TELEPHONE =========== */ 
 
-
-.back{
+.devant{
     position: absolute;
     width: 51%;
-    background-color: #07114f;
+    background:linear-gradient(180deg,#031741,#398ffa);
     border-radius: 60px;
     height: 100%;
-   
     left: 32%;
-    box-shadow: 1px -2px 0px 10px black inset}
-.enoch{
-    width: 100px;
-    height: 30px;
+    box-shadow: 1px -2px 0px 10px black inset;
+}
+.microTel{
+    width: 140px;
+    height: 40px;
     background-color: black;
     margin: 0 auto;
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content:start;
+    align-items: center;
 }
-.lum1{
+
+.microTel .pti{
+    background-color: #1b2c3d;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.boxDesBrille{
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+}
+
+.brille1{
+    /* position: absolute; */
     width: 60%;
     height: 2px;
     display: flex;
+    margin-top: 140px;
+    margin-left: -5px;
+    margin-right: 1550px;
     transform: rotate(45deg);
     background-color: slategrey;
 }
 .black1{
     width: 20%;
     background-color: black;
-    box-shadow: 1px 1px 18px 8px black;
+    box-shadow: 1px 1px 30px 10px black;
 }
 .blue1{
     width: 80%;
     background-color: #8feeff;
-    box-shadow: 1px 1px 20px 20px #47a3fd;
+    box-shadow: 1px 1px 40px 30px #47a3fd;
 }
-.lum2{
+
+
+.brille2{
     width: 100%;
-    height: 10px;
-    background-color: aquamarine;
+    height: 2px;
     display: flex;
 }
 
-.black2{
+.brille2 > .black{
     width: 20%;
     background-color: black;
+    box-shadow: 1px 1px 30px 7px black;
 }
-.blue2{
-    width: 80%;
-    background-color: blue;
+.brille2 > .blue2{
+    width: 60%;
+    background-color: #8feeff;
+    box-shadow: 1px 1px 20px 25px #47a3fd;    
 }
 
 
-.lum3{
-    width:10px;
-    height: 200px;
-    background-color: coral;
+.brille3{
+    width:2px;
+    height: 250px;
     margin: 0 auto;
+    margin-top: -100px;
 }
 .black3{
     height: 20%;
+    width: 2px;
     background-color: black;
+    box-shadow: 1px 1px 18px 8px black;
 }
 .blue3{
     height: 80%;
-    background-color: blue;
+    background-color: #8feeff;
+    box-shadow: 1px 1px 20px 25px #47a3fd;  
 }
