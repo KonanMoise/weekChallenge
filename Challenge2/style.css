@@ -144,12 +144,22 @@ body{
     border: 8px solid #5c6169;
 }
 
-.col2 div:nth-child(3){
+.col2 .ptipoint{
+    margin-top: -25px;
+    margin-left: 85%;
+    background-color: rgb(70, 68, 68);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.col2 div:nth-child(4){
     width: 40px;
     border-radius: 50%;
     height: 40px;
     background-color: #38393b;
     margin: 0 auto;
+    margin-top: -30px;
 } 
 
 /* =========== FACE DU TELEPHONE =========== */ 
@@ -160,7 +170,7 @@ body{
     background:linear-gradient(180deg,#031741,#398ffa);
     border-radius: 60px;
     height: 100%;
-    left: 32%;
+    left: 30%;
     box-shadow: 1px -2px 0px 10px black inset;
 }
 .microTel{
@@ -176,11 +186,12 @@ body{
 }
 
 .microTel .pti{
-    background-color: #1b2c3d;
+    background-color: #8feeff36;
     width: 15px;
     height: 15px;
     margin-left: 10px;
     border-radius: 50%;
+    border: 2px solid rgba(43, 40, 40, 0.527);
 }
 
 .boxDesBrille{
@@ -191,13 +202,12 @@ body{
 
 .brille1{
     /* position: absolute; */
-    width: 60%;
+    width: 65%;
     height: 2px;
     display: flex;
-    margin-top: 140px;
-    margin-left: -5px;
-    margin-right: 1550px;
-    transform: rotate(45deg);
+    margin-top: 150px;
+    margin-left: -50px;
+    transform: rotate(58deg);
     background-color: slategrey;
 }
 .black1{
